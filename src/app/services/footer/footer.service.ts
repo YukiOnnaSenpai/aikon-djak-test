@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { FooterBottomComponent } from 'src/app/components/footer/footer-bottom/footer-bottom.component';
-import { FooterTopComponent } from 'src/app/components/footer/footer-top/footer-top.component';
 import { ComponentItem } from 'src/app/utility/component-item';
+import { ComponentsRegistryService } from '../components-registry/components-registry.service';
 
 
 @Injectable({
@@ -13,10 +12,10 @@ export class FooterService {
 
   getFooter() {
     return [
-      new ComponentItem(FooterBottomComponent, {content: 'Test content footer bottom', tag: 'bottom footer', portalFlag: 'Djak'}),
-      new ComponentItem(FooterTopComponent, {content: 'Test content footer top', tag: 'top footer', portalFlag: 'Djak'}),
-      new ComponentItem(FooterBottomComponent, {content: 'Test content footer bottom', tag: 'bottom footer', portalFlag: 'Spot'}),
-      new ComponentItem(FooterTopComponent, {content: 'Test content footer top', tag: 'top footer', portalFlag: 'Spot'}),
+      new ComponentItem(ComponentsRegistryService.getComponent("FooterBottomComponent"), {content: 'Test content footer bottom', tag: 'bottom footer', portalFlag: 'Djak'}),
+      new ComponentItem(ComponentsRegistryService.getComponent("FooterTopComponent"), {content: 'Test content footer top', tag: 'top footer', portalFlag: 'Djak'}),
+      new ComponentItem(ComponentsRegistryService.getComponent("FooterBottomComponent"), {content: 'Test content footer bottom', tag: 'bottom footer', portalFlag: 'Spot'}),
+      new ComponentItem(ComponentsRegistryService.getComponent("FooterTopComponent"), {content: 'Test content footer top', tag: 'top footer', portalFlag: 'Spot'}),
     ];
   }
 }

@@ -1,4 +1,16 @@
 <div>
-    <h1> Header Bottom</h1>
-    <p>{{data.content}}</p>
+    <ng-template [ngIf]="data.portalFlag == 'Djak'" [ngIfElse]="spot">
+        <div class="{{data.portalFlag}}">
+            <h1>Bottom
+                {{data.portalFlag}}</h1>
+            <p>{{data.content}}</p>
+        </div>
+    </ng-template>
+    <ng-template #spot>
+        <div class="{{data.portalFlag}}">
+            <h1>Bottom
+                {{data.portalFlag}}</h1>
+            <p>{{data.content}}</p>
+        </div>
+    </ng-template>
 </div>
