@@ -13,8 +13,10 @@ export class FooterService {
 
   getFooter() {
     return [
-      new ComponentItem(FooterBottomComponent, {content: 'Test content footer bottom', tag: 'bottom footer'}),
-      new ComponentItem(FooterTopComponent, {content: 'Test content footer top', tag: 'top footer'}),
+      new ComponentItem(FooterBottomComponent, {content: 'Test content footer bottom', tag: 'bottom footer', portalFlag: 'Djak'}),
+      new ComponentItem(FooterTopComponent, {content: 'Test content footer top', tag: 'top footer', portalFlag: 'Djak'}),
+      new ComponentItem(FooterBottomComponent, {content: 'Test content footer bottom', tag: 'bottom footer', portalFlag: 'Spot'}),
+      new ComponentItem(FooterTopComponent, {content: 'Test content footer top', tag: 'top footer', portalFlag: 'Spot'}),
     ];
   }
 }
