@@ -14,6 +14,7 @@ import { FooterBottomComponent } from './components/footer/footer-bottom/footer-
 import { MasterDirective } from './directives/master.directive';
 import { HeaderComponent } from './components/header/header/header.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
+import { HeaderBottomComponent } from './components/header/header-bottom/header-bottom.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './components/footer/footer/footer.component';
     MainComponent,
     HeaderTopComponent,
     HeaderMiddleComponent,
+    HeaderBottomComponent,
     FooterTopComponent,
     FooterBottomComponent,
     HeaderComponent,

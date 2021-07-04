@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Header } from 'src/app/interfaces/header/header';
+import { ComponentsRegistryService } from 'src/app/services/components-registry/components-registry.service';
 
 @Component({
   selector: 'app-header-middle',
@@ -12,3 +13,5 @@ export class HeaderMiddleComponent implements Header {
   constructor() { }
 
 }
+
+ComponentsRegistryService.registerComponent("HeaderMiddleComponent", HeaderMiddleComponent);

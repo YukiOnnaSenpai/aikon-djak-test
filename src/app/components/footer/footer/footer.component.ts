@@ -1,6 +1,7 @@
 import { Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
 import { MasterDirective } from 'src/app/directives/master.directive';
 import { Footer } from 'src/app/interfaces/footer/footer';
+import { ComponentsRegistryService } from 'src/app/services/components-registry/components-registry.service';
 import { FooterService } from 'src/app/services/footer/footer.service';
 import { ComponentItem } from 'src/app/utility/component-item';
 
@@ -32,3 +33,5 @@ export class FooterComponent implements OnInit {
   }
 
 }
+
+ComponentsRegistryService.registerComponent("FooterComponent",FooterComponent);

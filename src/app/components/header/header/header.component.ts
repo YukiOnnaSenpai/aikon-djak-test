@@ -1,6 +1,7 @@
 import { Component, ComponentFactoryResolver, OnInit, ViewChild } from '@angular/core';
 import { MasterDirective } from 'src/app/directives/master.directive';
 import { Header } from 'src/app/interfaces/header/header';
+import { ComponentsRegistryService } from 'src/app/services/components-registry/components-registry.service';
 import { HeaderService } from 'src/app/services/header/header.service';
 import { ComponentItem } from 'src/app/utility/component-item';
 
@@ -32,3 +33,4 @@ export class HeaderComponent implements OnInit {
   }
 
 }
+ComponentsRegistryService.registerComponent("HeaderComponent", HeaderComponent);
