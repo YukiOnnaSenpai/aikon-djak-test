@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ComponentsRegistryService } from 'src/app/services/components-registry/components-registry.service';
 
 @Component({
   selector: 'app-main',
@@ -13,3 +14,4 @@ export class MainComponent implements OnInit {
   }
 
 }
+ComponentsRegistryService.registerComponent("MainComponent", MainComponent);

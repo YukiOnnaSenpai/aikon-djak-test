@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Header } from 'src/app/interfaces/header/header';
+import { ComponentsRegistryService } from 'src/app/services/components-registry/components-registry.service';
 
 @Component({
   selector: 'app-header-bottom',
@@ -12,3 +13,4 @@ export class HeaderBottomComponent implements Header {
   constructor() { }
 
 }
+ComponentsRegistryService.registerComponent("HeaderBottomComponent", HeaderBottomComponent);

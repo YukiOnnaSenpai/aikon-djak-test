@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Footer } from 'src/app/interfaces/footer/footer';
+import { ComponentsRegistryService } from 'src/app/services/components-registry/components-registry.service';
 
 @Component({
   selector: 'app-footer-top',
@@ -12,3 +13,5 @@ export class FooterTopComponent implements Footer {
   constructor() { }
 
 }
+
+ComponentsRegistryService.registerComponent("FooterTopComponent", FooterTopComponent);
