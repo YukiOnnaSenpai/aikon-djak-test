@@ -15,6 +15,8 @@ import { MasterDirective } from './directives/master.directive';
 import { HeaderComponent } from './components/header/header/header.component';
 import { FooterComponent } from './components/footer/footer/footer.component';
 import { HeaderBottomComponent } from './components/header/header-bottom/header-bottom.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './services/interceptor/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -33,9 +35,16 @@ import { HeaderBottomComponent } from './components/header/header-bottom/header-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+        provide: HTTP_INTERCEPTORS,
+        useClass: InterceptorService,
+        multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

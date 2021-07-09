@@ -1,12 +1,12 @@
 <div>
-    <ng-template [ngIf]="data.portalFlag == 'Djak'" [ngIfElse]="spot">
+    <ng-template [ngIf]="data.portalFlag == 'Djak'" [ngIfElse]="localhost">
         <div class="{{data.portalFlag}}">
             <h1>Middle
                 {{data.portalFlag}}</h1>
             <p>{{data.content}}</p>
         </div>
     </ng-template>
-    <ng-template #spot>
+    <ng-template #localhost>
         <div class="{{data.portalFlag}}">
             <h1>Middle
                 {{data.portalFlag}}</h1>

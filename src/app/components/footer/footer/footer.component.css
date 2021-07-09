@@ -1,7 +1,7 @@
 :host ::ng-deep .Djak{
     background-color: aquamarine;
 }
-:host ::ng-deep .Spot {
+:host ::ng-deep .localhost {
     background-color: burlywood;
 }
 
