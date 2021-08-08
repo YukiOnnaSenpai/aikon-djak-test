@@ -14,8 +14,8 @@ export class FooterService {
     return [
       new ComponentItem(ComponentsRegistryService.getComponent("FooterBottomComponent"), {content: 'Test content footer bottom', tag: 'bottom footer', portalFlag: 'Djak'}),
       new ComponentItem(ComponentsRegistryService.getComponent("FooterTopComponent"), {content: 'Test content footer top', tag: 'top footer', portalFlag: 'Djak'}),
-      new ComponentItem(ComponentsRegistryService.getComponent("FooterBottomComponent"), {content: 'Test content footer bottom', tag: 'bottom footer', portalFlag: 'Spot'}),
-      new ComponentItem(ComponentsRegistryService.getComponent("FooterTopComponent"), {content: 'Test content footer top', tag: 'top footer', portalFlag: 'Spot'}),
+      // new ComponentItem(ComponentsRegistryService.getComponent("FooterBottomComponent"), {content: 'Test content footer bottom', tag: 'bottom footer', portalFlag: 'Spot'}),
+      // new ComponentItem(ComponentsRegistryService.getComponent("FooterTopComponent"), {content: 'Test content footer top', tag: 'top footer', portalFlag: 'Spot'}),
     ];
   }
 }

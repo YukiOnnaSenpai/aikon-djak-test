@@ -12,6 +12,7 @@ import { ComponentItem } from 'src/app/utility/component-item';
 })
 export class FooterComponent implements OnInit {
   components: ComponentItem[] = [];
+  flag: string = '';
 
   @ViewChild(MasterDirective, { static: true }) masterDirective!: MasterDirective;
 
@@ -29,6 +30,7 @@ export class FooterComponent implements OnInit {
       const viewContainerRef = this.masterDirective.viewContainerRef;
       const componentRef = viewContainerRef.createComponent<Footer>(componentFactory);
       componentRef.instance.data = item.data;
+      this.flag = item.data.portalFlag;
     });
   }
 

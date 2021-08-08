@@ -1,16 +1,36 @@
-<div>
+<!-- <div>
     <ng-template [ngIf]="data.portalFlag == 'Djak'" [ngIfElse]="spot">
-        <div class="{{data.portalFlag}}">
+        <div class="{{data.portalFlag}} bold">
             <h1>Bottom
                 {{data.portalFlag}}</h1>
             <p>{{data.content}}</p>
         </div>
     </ng-template>
     <ng-template #spot>
-        <div class="{{data.portalFlag}}">
+        <div class="{{data.portalFlag}} bold">
             <h1>Bottom
                 {{data.portalFlag}}</h1>
             <p>{{data.content}}</p>
         </div>
     </ng-template>
+</div> -->
+<div>
+    <ng-template [ngIf]="data.portalFlag == 'Djak'" [ngIfElse]="spot">
+            <h1>Bottom
+                {{data.portalFlag}}</h1>
+            <p>{{data.content}}</p>
+    </ng-template>
+    <ng-template #spot>
+            <h1>Bottom
+                {{data.portalFlag}}</h1>
+            <p>{{data.content}}</p>
+    </ng-template>
 </div>
+<!-- <div>
+    <div class="{{data.portalFlag}}">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+    </div>
+</div> -->
